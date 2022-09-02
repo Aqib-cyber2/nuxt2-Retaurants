@@ -23,7 +23,7 @@
             <span class="text-sm font-medium">85% would make this again</span>
           </div>
 
-          <h1 class="text-5xl font-bold my-5 leading-tight">Mighty Super Cheesecake</h1>
+          <h1 class="text-5xl font-bold my-5 leading-tight">Spicy Korean Devil Egg</h1>
 
           <p class="text-lg">
             Look no further for a creamy and ultra smooth
@@ -35,3 +35,7 @@
     </section>
   </div>
 </template>
+
+<style lang="sass">
+
+</style>

@@ -1,9 +1,9 @@
 <template>
-    <header class="mb-6">
-        <nav class="mx-auto py-8 flex flex-wrap item-center">
+    <header class="">
+        <nav class="mx-auto border border-transparent py-4 flex flex-wrap item-center">
      
             <div class="brand">
-                <img class="w-40" src="https://fabrx.co/preview/tastebite/assets/images/brands/brand4.svg" alt="logo">
+                <img class="w-36" src="https://fabrx.co/preview/tastebite/assets/images/brands/brand4.svg" alt="logo">
             </div>
 
             <ul class="
