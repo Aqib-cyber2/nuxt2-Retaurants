@@ -2,6 +2,12 @@
     "from": 1,
     "to": 20,
     "count": 10000,
+    "_links": {
+      "next": {
+        "href": "https://api.edamam.com/api/recipes/v2?q=chicken&app_key=81dce8982fa94959a84adaf614106734&_cont=CHcVQBtNNQphDmgVQntAEX4BYldtBAQAR2FDBWIQZlR2AgEBUXlSB2IQZAQiVwYPRjFGBDFGMlFwVlFTF2RHBzEbMFAhDVcVLnlSVSBMPkd5BgMbUSYRVTdgMgksRlpSAAcRXTVGcV84SU4%3D&type=any&app_id=01711ad5",
+        "title": "Next page"
+      }
+    },
     "hits": [
       {
         "recipe": {
