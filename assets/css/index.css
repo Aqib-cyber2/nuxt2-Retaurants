@@ -58,11 +58,10 @@ body{
     VALUE HELP YOU SECTION
 -------------------------------*/
 .img-box{
-    --spacing: 60%;
+    --spacing: 80%;
 
     width: var(--spacing);
-    padding-top: 50%;
-    margin: 0 auto;
+    margin-left: auto;
     border: 15px solid #fff;
     border-radius: var(--radius-1);
 }

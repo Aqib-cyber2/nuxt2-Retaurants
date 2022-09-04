@@ -4,7 +4,7 @@
 
     <!-- slider section -->
     <section class="main-slider mb-10">
-      <div class="flex bg-[#8e4df6] text-slate-50 items-center">
+      <div class="flex bg-[#817ff7] text-slate-50 items-center">
 
         <!-- left column -->
         <div class="w-7/12">
@@ -38,21 +38,20 @@
 
     <!-- OUR VALUES -->
     <section class="flex">
-      
-      <div class="w-7/12">
-        <div class="img-box">
-          
-        </div>
-        <!-- <img class="w-full" src="https://media.istockphoto.com/photos/chef-presents-something-on-a-black-background-picture-id1165683221?k=20&m=1165683221&s=612x612&w=0&h=MQTYoVWgEWVA4Sq9NGa9r6Cb586e5h18cqcXd8V7rqg=" alt=""> -->
-      </div>
 
       <div class="w-5/12">
         <h1 class="text-5xl title font-bold my-5 leading-normal">Our Value to help you</h1>
         <p>
+          <font-awesome-icon :icon="['fas', 'user-secret']" />
           We are here to provide the best value for your health and you. Let's join us to know more.
         </p>
       </div>
 
+      <div class="w-7/12">
+        <div class="img-box bg-[#b1b0f1]">
+          <img src="@/assets/imgs/chef.png" class="w-full" alt="chef">
+        </div>
+      </div>
 
     </section>
   </div>
