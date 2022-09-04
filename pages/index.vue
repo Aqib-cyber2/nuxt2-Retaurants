@@ -3,7 +3,7 @@
     <TheNavbar />
 
     <!-- slider section -->
-    <section class="main-slider mb-10">
+    <section class="main-slider mb-20">
       <div class="flex bg-[#817ff7] text-slate-50 items-center">
 
         <!-- left column -->

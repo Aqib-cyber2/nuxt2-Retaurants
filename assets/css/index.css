@@ -58,10 +58,24 @@ body{
     VALUE HELP YOU SECTION
 -------------------------------*/
 .img-box{
-    --spacing: 80%;
+    --spacing: 70%;
 
+    position: relative;
+    min-height: 400px;
     width: var(--spacing);
     margin-left: auto;
     border: 15px solid #fff;
-    border-radius: var(--radius-1);
+    border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;
+
+    /* box shadow */
+    -webkit-box-shadow: -32px 20px 99px -59px rgba(164,79,217,1);
+    -moz-box-shadow: -32px 20px 99px -59px rgba(164,79,217,1);
+    box-shadow: -32px 20px 99px -59px rgba(164,79,217,1);
+}
+
+.img-box img{
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: scale(1.53);
 }
