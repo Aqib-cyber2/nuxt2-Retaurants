@@ -1,15 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&family=Oswald&display=swap');
+@font-face {
+    font-family: 'recipeVegan';
+    src: url('../fonts/VeganStylePersonalUse-5Y58.ttf');
+}
+@font-face {
+    font-family: 'recipeQuite';
+    src: url('../fonts/QuiteMagicalRegular-8VA2.ttf');
+}
+@font-face {
+    font-family: 'recipeGood';
+    src: url('../fonts/GoodUnicornRegular-Rxev.ttf');
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Karla', sans-serif;
+}
+
+:root{
+    --radius-1 : 40px
+}
+
+body{
+    background-color: #f4f4f4;
 }
 
 .container{
     max-width: 1100px;
 }
 
-h1,h2,h3,h4{
-    font-family: 'Abril Fatface', cursive;
+.title{
+    font-size: 2.5rem;
+    font-family: 'recipeVegan';
+    letter-spacing: 5px;    
+}
+
+/*--------------------------
+    main slider 
+--------------------------*/
+
+.main-slider{
+    background-color: #fff;
+    border-radius: var(--radius-1);
+    overflow: hidden;
+    border: 15px solid #fff;
+}
+
+.main-slider > div{
+    overflow: hidden;
+    /* border-radius: 30px; */
 }

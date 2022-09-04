@@ -3,7 +3,7 @@
     <TheNavbar />
 
     <!-- slider section -->
-    <section>
+    <section class="main-slider">
       <div class="flex bg-sky-200 items-center">
 
         <!-- left column -->
@@ -12,6 +12,7 @@
         </div>
         <!-- right column -->
         <div class="w-5/12 px-12">
+
           <div class="flex">
             <svg class="mr-4" data-name="feather-icon/trending-up" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
               viewBox="0 0 20 20">
@@ -23,7 +24,7 @@
             <span class="text-sm font-medium">85% would make this again</span>
           </div>
 
-          <h1 class="text-5xl font-bold my-5 leading-tight">Spicy Korean Devil Egg</h1>
+          <h1 class="text-5xl title font-bold my-5 leading-normal">Spicy Korean Devil Egg</h1>
 
           <p class="text-lg">
             Look no further for a creamy and ultra smooth
