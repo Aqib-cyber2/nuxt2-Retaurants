@@ -37,18 +37,22 @@
 
 
     <!-- OUR VALUES -->
-    <section class="d-flex">
-
+    <section class="flex">
+      
       <div class="w-7/12">
+        <div class="img-box">
+          
+        </div>
+        <!-- <img class="w-full" src="https://media.istockphoto.com/photos/chef-presents-something-on-a-black-background-picture-id1165683221?k=20&m=1165683221&s=612x612&w=0&h=MQTYoVWgEWVA4Sq9NGa9r6Cb586e5h18cqcXd8V7rqg=" alt=""> -->
+      </div>
+
+      <div class="w-5/12">
         <h1 class="text-5xl title font-bold my-5 leading-normal">Our Value to help you</h1>
         <p>
           We are here to provide the best value for your health and you. Let's join us to know more.
         </p>
       </div>
 
-      <div class="w-5/12">
-        
-      </div>
 
     </section>
   </div>
