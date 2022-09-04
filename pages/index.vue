@@ -3,8 +3,8 @@
     <TheNavbar />
 
     <!-- slider section -->
-    <section class="main-slider">
-      <div class="flex bg-sky-200 items-center">
+    <section class="main-slider mb-10">
+      <div class="flex bg-[#8e4df6] text-slate-50 items-center">
 
         <!-- left column -->
         <div class="w-7/12">
@@ -33,6 +33,23 @@
         </div>
 
       </div>
+    </section>
+
+
+    <!-- OUR VALUES -->
+    <section class="d-flex">
+
+      <div class="w-7/12">
+        <h1 class="text-5xl title font-bold my-5 leading-normal">Our Value to help you</h1>
+        <p>
+          We are here to provide the best value for your health and you. Let's join us to know more.
+        </p>
+      </div>
+
+      <div class="w-5/12">
+        
+      </div>
+
     </section>
   </div>
 </template>

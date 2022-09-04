@@ -18,7 +18,9 @@
 }
 
 :root{
-    --radius-1 : 40px
+    /* colors */
+    /* --info: #8e4df6; */
+    --radius-1 : 40px;
 }
 
 body{
@@ -44,6 +46,11 @@ body{
     border-radius: var(--radius-1);
     overflow: hidden;
     border: 15px solid #fff;
+}
+
+.bg-sky-200{
+    background-color: var(--info);
+    color: #fff;
 }
 
 .main-slider > div{
