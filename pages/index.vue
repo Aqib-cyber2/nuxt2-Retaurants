@@ -4,7 +4,7 @@
 
     <!-- slider section -->
     <section class="main-slider mb-20">
-      <div class="flex bg-[#817ff7] text-slate-200 items-center">
+      <div class="flex bg-indigo text-white items-center">
 
         <!-- left column -->
         <div class="w-7/12">
@@ -58,69 +58,85 @@
 
         </div>
 
-        <div class="our-value-cards grid grid-cols-2 gap-4">
+        <div class="our-value-cards grid grid-cols-2 gap-4 gap-y-10">
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
 
-            <span class="inline-block px-3 
-              py-1.5 icon-box rounded-xl 
-              text-orange-500
+            <span class="
+              inline-block px-3 
+              py-2 
+              rounded-xl
+              text-xl
+              bg-[#a083f2]
+              text-white
               absolute
               top-0
               mt-[-22px]
             ">
-              <font-awesome-icon :icon="['fa', 'gem']" />
+              <font-awesome-icon :icon="['fa', 'heart']" />
             </span>
 
             <h4 class="mb-2 font-bold">Becomes Healthier</h4>
             <p> Immuniy will stronger if the body is healthier </p>
           </div>
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
 
-            <span class="inline-block px-3 
-              py-1.5 icon-box rounded-xl 
-              text-orange-500
+            <span class="
+              inline-block px-3 
+              py-2
+              rounded-xl
+              text-xl
+              bg-yellow
+              text-white
               absolute
               top-0
               mt-[-22px]
             ">
-              <font-awesome-icon :icon="['fa', 'gem']" />
+              <font-awesome-icon :icon="['fa', 'bolt']" />
             </span>
 
-            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <h4 class="mb-2 font-bold">Increase Energy</h4>
+            <p> Immuniy will stronger if the body is healthier </p>
+          </div>
+
+          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
+
+            <span class="
+              inline-block px-3 
+              py-2
+              rounded-xl
+              text-xl
+              bg-[#a083f2]
+              text-white
+              absolute
+              top-0
+              mt-[-22px]
+            ">
+              <font-awesome-icon :icon="['fa', 'lock']" />
+            </span>
+
+            <h4 class="mb-2 font-bold">Controlling weight</h4>
             <p> Immuniy will stronger if the body is healthier </p>
           </div>
 
           <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
 
-            <span class="inline-block px-3 
-              py-1.5 icon-box rounded-xl 
-              text-orange-500
+            <span class="
+              inline-block px-3 
+              py-2
+              rounded-xl
+              text-xl
+              bg-[#a083f2]
+              text-white
               absolute
               top-0
               mt-[-22px]
             ">
-              <font-awesome-icon :icon="['fa', 'gem']" />
+              <font-awesome-icon :icon="['fa', 'star']" />
             </span>
 
-            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
-            <p> Immuniy will stronger if the body is healthier </p>
-          </div>
-
-          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
-
-            <span class="inline-block px-3 
-              py-1.5 icon-box rounded-xl 
-              text-orange-500
-              absolute
-              top-0
-              mt-[-22px]
-            ">
-              <font-awesome-icon :icon="['fa', 'gem']" />
-            </span>
-
-            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <h4 class="mb-2 font-bold">Becomes Happier</h4>
             <p> Immuniy will stronger if the body is healthier </p>
           </div>
 

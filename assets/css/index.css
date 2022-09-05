@@ -92,6 +92,6 @@ body{
 
 .icon-box{
     background-color: var(--info);
-    color: #ffc749;
+    /* color: #ffc749; */
     font-size: 22px;
 }
