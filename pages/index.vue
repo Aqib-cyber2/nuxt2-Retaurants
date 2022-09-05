@@ -36,13 +36,13 @@
     </section>
 
 
-    <!-- OUR VALUES -->
+    <!-- OUR VALUES SECION -->
     <section class="flex our--value">
 
       <div class="w-5/12">
 
         <h1 class="title font-bold my-5 leading-none flex items-start">
-          <span class="inline-block text-xl mt-2 mr-2 px-3 py-2.5">
+          <span class="inline-block mt-2 mr-3 px-3 py-3 icon-box rounded-xl text-orange-500">
             <font-awesome-icon :icon="['fa', 'gem']" />
           </span>
 

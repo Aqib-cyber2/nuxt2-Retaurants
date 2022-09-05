@@ -24,7 +24,7 @@
 
 :root{
     /* colors */
-    /* --info: #8e4df6; */
+    --info: #9f68ff;
     --radius-1 : 40px;
 }
 
@@ -64,7 +64,7 @@ body{
 -------------------------------*/
 .our--value .title{
     font-family: 'Alovera';
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .img-box{
@@ -88,4 +88,10 @@ body{
     bottom: 0;
     transform-origin: bottom;
     transform: scale(1.53);
+}
+
+.icon-box{
+    background-color: var(--info);
+    color: #ffc749;
+    font-size: 22px;
 }
