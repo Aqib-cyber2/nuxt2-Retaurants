@@ -1,3 +1,34 @@
+<script>
+  export default{
+    data(){
+      return {
+        helpCards: [
+          {
+            title: 'Becomes Healthier',
+            description: 'immune will stronger if the body is healthier',
+            icon: 'heart'
+          },
+          {
+            title: 'Increase Energy',
+            description: 'Have enough energy can help carry out a routine',
+            icon: 'bolt'
+          },
+          {
+            title: 'Becomes Healthier',
+            description: 'Body will feel lighterand will not be easily tired',
+            icon: 'lock'
+          },
+          {
+            title: 'Becomes Healthier',
+            description: 'living a healthy life will also increase self-confidence',
+            icon: 'heart'
+          },
+        ]
+      }
+    }
+  }
+</script>
+
 <template>
   <div class="container mx-auto px-8 font-sans">
     <TheNavbar />
@@ -43,10 +74,10 @@
 
         <div class="px-3 mb-10">
 
-          <h1 class="title font-bold my-5 leading-none flex items-start justify-between">
+          <h1 class="title font-bold my-5 leading-none flex items-start justify-between text-indigo-400">
             <span class="
               inline-block 
-              mt-2 mr-7 px-3 py-3 
+              mt-2 mr-7 px-3 py-2.5 
               text-xl
               bg-indigo 
               text-yellow
@@ -64,9 +95,11 @@
 
         </div>
 
-        <div class="our-value-cards grid grid-cols-2 gap-4 gap-y-10">
+        <div class="our-value-cards grid grid-cols-2 gap-4 gap-y-12">
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
+          <div 
+            v-for="(card, i) in helpCards" :key="i"
+            class="border p-6 pt-10 bg-indigo-100 rounded-3xl border border-white relative">
 
             <span class="
               inline-block px-3 
@@ -79,14 +112,14 @@
               top-0
               mt-[-22px]
             ">
-              <font-awesome-icon :icon="['fa', 'heart']" />
+              <font-awesome-icon :icon="['fa', card.icon]" />
             </span>
 
-            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
-            <p> Immuniy will stronger if the body is healthier </p>
+            <h4 class="mb-2 font-bold text-indigo-400 text-indigo-400"> {{card.title}} </h4>
+            <p> {{card.description}} </p>
           </div>
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
+          <!-- <div class="border p-6 pt-10 shadow-md rounded-3xl border border-white relative">
 
             <span class="
               inline-block px-3 
@@ -102,11 +135,11 @@
               <font-awesome-icon :icon="['fa', 'bolt']" />
             </span>
 
-            <h4 class="mb-2 font-bold">Increase Energy</h4>
+            <h4 class="mb-2 font-bold text-indigo-400">Increase Energy</h4>
             <p> Immuniy will stronger if the body is healthier </p>
-          </div>
+          </div> -->
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-3xl border border-white relative">
+          <!-- <div class="border p-6 pt-10 bg-indigo-100 rounded-3xl border border-white relative">
 
             <span class="
               inline-block px-3 
@@ -122,11 +155,11 @@
               <font-awesome-icon :icon="['fa', 'lock']" />
             </span>
 
-            <h4 class="mb-2 font-bold">Controlling weight</h4>
+            <h4 class="mb-2 font-bold text-indigo-400">Controlling weight</h4>
             <p> Immuniy will stronger if the body is healthier </p>
           </div>
 
-          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+          <div class="border p-6 pt-10 bg-indigo-100 rounded-xl border border-white relative">
 
             <span class="
               inline-block px-3 
@@ -142,16 +175,16 @@
               <font-awesome-icon :icon="['fa', 'star']" />
             </span>
 
-            <h4 class="mb-2 font-bold">Becomes Happier</h4>
+            <h4 class="mb-2 font-bold text-indigo-400">Becomes Happier</h4>
             <p> Immuniy will stronger if the body is healthier </p>
-          </div>
+          </div> -->
 
 
         </div>
 
       </div>
 
-      <div class="w-7/12">
+      <div class="w-7/12" >
         <div class="img-box bg-[#b1b0f1]">
           <img src="@/assets/imgs/chef.png" class="w-full" alt="chef">
         </div>
@@ -161,6 +194,3 @@
   </div>
 </template>
 
-<style lang="sass">
-
-</style>

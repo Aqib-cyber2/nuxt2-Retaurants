@@ -10,7 +10,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'indigo': '#817ff7',
+        // 'black': '',
+        'indigo': {
+          default: '#817ff7',
+          100: '#efeffc',
+          400: '#383766'
+        },
         'yellow': '#ffbc18'
       }
     },
