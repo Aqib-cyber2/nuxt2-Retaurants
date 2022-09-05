@@ -126,7 +126,7 @@
             </span>
 
             <h4 class="mb-2 font-bold text-indigo-400 text-indigo-400"> {{card.title}} </h4>
-            <p> {{card.description}} </p>
+            <p class="text-xs text-indigo-200"> {{card.description}} </p>
           </div>
 
 

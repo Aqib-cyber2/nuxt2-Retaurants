@@ -14,6 +14,7 @@ module.exports = {
         'indigo': {
           default: '#817ff7',
           100: '#efeffc',
+          200: '#9f91b9',
           400: '#383766'
         },
         'yellow': '#ffbc18'
