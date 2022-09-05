@@ -1,5 +1,6 @@
 <script>
   export default{
+
     data(){
       return {
         helpCards: [
@@ -26,6 +27,7 @@
         ]
       }
     }
+
   }
 </script>
 
@@ -99,85 +101,33 @@
 
           <div 
             v-for="(card, i) in helpCards" :key="i"
-            class="border p-6 pt-10 bg-indigo-100 rounded-3xl border border-white relative">
+            class="
+            border p-6 pt-10 
+            rounded-3xl 
+            border border-white 
+            relative"
+            :class="[i===1 ? 'shadow-lg' : 'bg-indigo-100']"
+          >
 
-            <span class="
-              inline-block px-3 
+            <span 
+            :class="[
+              `inline-block px-3 
               py-2 
               rounded-xl
               text-xl
-              bg-indigo
               text-white
               absolute
               top-0
-              mt-[-22px]
-            ">
+              mt-[-22px] 
+              ${i===1 ? 'bg-yellow' : 'bg-indigo'}`
+            ]"
+            >
               <font-awesome-icon :icon="['fa', card.icon]" />
             </span>
 
             <h4 class="mb-2 font-bold text-indigo-400 text-indigo-400"> {{card.title}} </h4>
             <p> {{card.description}} </p>
           </div>
-
-          <!-- <div class="border p-6 pt-10 shadow-md rounded-3xl border border-white relative">
-
-            <span class="
-              inline-block px-3 
-              py-2
-              rounded-xl
-              text-xl
-              bg-yellow
-              text-white
-              absolute
-              top-0
-              mt-[-22px]
-            ">
-              <font-awesome-icon :icon="['fa', 'bolt']" />
-            </span>
-
-            <h4 class="mb-2 font-bold text-indigo-400">Increase Energy</h4>
-            <p> Immuniy will stronger if the body is healthier </p>
-          </div> -->
-
-          <!-- <div class="border p-6 pt-10 bg-indigo-100 rounded-3xl border border-white relative">
-
-            <span class="
-              inline-block px-3 
-              py-2
-              rounded-xl
-              text-xl
-              bg-indigo
-              text-white
-              absolute
-              top-0
-              mt-[-22px]
-            ">
-              <font-awesome-icon :icon="['fa', 'lock']" />
-            </span>
-
-            <h4 class="mb-2 font-bold text-indigo-400">Controlling weight</h4>
-            <p> Immuniy will stronger if the body is healthier </p>
-          </div>
-
-          <div class="border p-6 pt-10 bg-indigo-100 rounded-xl border border-white relative">
-
-            <span class="
-              inline-block px-3 
-              py-2
-              rounded-xl
-              text-xl
-              bg-indigo
-              text-white
-              absolute
-              top-0
-              mt-[-22px]
-            ">
-              <font-awesome-icon :icon="['fa', 'star']" />
-            </span>
-
-            <h4 class="mb-2 font-bold text-indigo-400">Becomes Happier</h4>
-            <p> Immuniy will stronger if the body is healthier </p>
-          </div> -->
 
 
         </div>
