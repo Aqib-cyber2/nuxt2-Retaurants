@@ -41,18 +41,91 @@
 
       <div class="w-5/12">
 
-        <h1 class="title font-bold my-5 leading-none flex items-start">
-          <span class="inline-block mt-2 mr-3 px-3 py-3 icon-box rounded-xl text-orange-500">
-            <font-awesome-icon :icon="['fa', 'gem']" />
-          </span>
+        <div class="px-3 mb-10">
 
-          Our Value to help you
-        </h1>
+          <h1 class="title font-bold my-5 leading-none flex items-start justify-between">
+            <span class="inline-block mt-2 mr-7 px-3 py-3 icon-box rounded-xl text-orange-500">
+              <font-awesome-icon :icon="['fa', 'gem']" />
+            </span>
 
-        <p>
-          We are here to provide the best value for your health and you. 
-          Let's join us to know more.
-        </p>
+            Our Value to help you
+          </h1>
+
+          <p>
+            We are here to provide the best value for your health and you. 
+            Let's join us to know more.
+          </p>
+
+        </div>
+
+        <div class="our-value-cards grid grid-cols-2 gap-4">
+
+          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+
+            <span class="inline-block px-3 
+              py-1.5 icon-box rounded-xl 
+              text-orange-500
+              absolute
+              top-0
+              mt-[-22px]
+            ">
+              <font-awesome-icon :icon="['fa', 'gem']" />
+            </span>
+
+            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <p> Immuniy will stronger if the body is healthier </p>
+          </div>
+
+          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+
+            <span class="inline-block px-3 
+              py-1.5 icon-box rounded-xl 
+              text-orange-500
+              absolute
+              top-0
+              mt-[-22px]
+            ">
+              <font-awesome-icon :icon="['fa', 'gem']" />
+            </span>
+
+            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <p> Immuniy will stronger if the body is healthier </p>
+          </div>
+
+          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+
+            <span class="inline-block px-3 
+              py-1.5 icon-box rounded-xl 
+              text-orange-500
+              absolute
+              top-0
+              mt-[-22px]
+            ">
+              <font-awesome-icon :icon="['fa', 'gem']" />
+            </span>
+
+            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <p> Immuniy will stronger if the body is healthier </p>
+          </div>
+
+          <div class="border p-6 pt-10 bg-blue-50 rounded-xl border border-white relative">
+
+            <span class="inline-block px-3 
+              py-1.5 icon-box rounded-xl 
+              text-orange-500
+              absolute
+              top-0
+              mt-[-22px]
+            ">
+              <font-awesome-icon :icon="['fa', 'gem']" />
+            </span>
+
+            <h4 class="mb-2 font-bold">Becomes Healthier</h4>
+            <p> Immuniy will stronger if the body is healthier </p>
+          </div>
+
+
+        </div>
 
       </div>
 
