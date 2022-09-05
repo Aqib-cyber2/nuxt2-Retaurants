@@ -4,7 +4,7 @@
 
     <!-- slider section -->
     <section class="main-slider mb-20">
-      <div class="flex bg-[#817ff7] text-slate-50 items-center">
+      <div class="flex bg-[#817ff7] text-slate-200 items-center">
 
         <!-- left column -->
         <div class="w-7/12">
@@ -37,14 +37,23 @@
 
 
     <!-- OUR VALUES -->
-    <section class="flex">
+    <section class="flex our--value">
 
       <div class="w-5/12">
-        <h1 class="text-5xl title font-bold my-5 leading-normal">Our Value to help you</h1>
+
+        <h1 class="title font-bold my-5 leading-none flex items-start">
+          <span class="inline-block text-xl mt-2 mr-2 px-3 py-2.5">
+            <font-awesome-icon :icon="['fa', 'gem']" />
+          </span>
+
+          Our Value to help you
+        </h1>
+
         <p>
-          <font-awesome-icon :icon="['fas', 'user-secret']" />
-          We are here to provide the best value for your health and you. Let's join us to know more.
+          We are here to provide the best value for your health and you. 
+          Let's join us to know more.
         </p>
+
       </div>
 
       <div class="w-7/12">
