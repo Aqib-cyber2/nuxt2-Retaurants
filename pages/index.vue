@@ -44,7 +44,13 @@
         <div class="px-3 mb-10">
 
           <h1 class="title font-bold my-5 leading-none flex items-start justify-between">
-            <span class="inline-block mt-2 mr-7 px-3 py-3 icon-box rounded-xl text-orange-500">
+            <span class="
+              inline-block 
+              mt-2 mr-7 px-3 py-3 
+              text-xl
+              bg-indigo 
+              text-yellow
+              rounded-xl">
               <font-awesome-icon :icon="['fa', 'gem']" />
             </span>
 
@@ -67,7 +73,7 @@
               py-2 
               rounded-xl
               text-xl
-              bg-[#a083f2]
+              bg-indigo
               text-white
               absolute
               top-0
@@ -107,7 +113,7 @@
               py-2
               rounded-xl
               text-xl
-              bg-[#a083f2]
+              bg-indigo
               text-white
               absolute
               top-0
@@ -127,7 +133,7 @@
               py-2
               rounded-xl
               text-xl
-              bg-[#a083f2]
+              bg-indigo
               text-white
               absolute
               top-0
