@@ -20,8 +20,8 @@ module.exports = {
         'yellow': '#ffbc18'
       }
     },
-    
+
+
   },
   plugins: [],
-  mode: 'jit',
 }

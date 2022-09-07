@@ -81,8 +81,8 @@
               inline-block 
               mt-2 mr-7 px-3 py-2.5 
               text-xl
-              bg-indigo 
-              text-yellow
+              bg-yellow
+              text-white
               rounded-xl">
               <font-awesome-icon :icon="['fa', 'gem']" />
             </span>
@@ -141,6 +141,9 @@
       </div>
 
     </section>
+
+
+    <!-- slider -->
   </div>
 </template>
 
