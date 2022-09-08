@@ -12,10 +12,10 @@ module.exports = {
       colors: {
         // 'black': '',
         'indigo': {
-          default: '#817ff7',
-          100: '#efeffc',
-          200: '#9f91b9',
-          400: '#383766'
+          light: 'rgb(239 239 252)',
+          200: 'rgb(159 145 185)',
+          400: 'rgb(56 55 102)',
+          dark: 'rgb(129 127 247)',
         },
         'yellow': '#ffbc18'
       }

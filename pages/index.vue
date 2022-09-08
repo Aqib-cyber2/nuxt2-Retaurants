@@ -37,7 +37,7 @@
 
     <!-- slider section -->
     <section class="main-slider mb-20">
-      <div class="flex bg-indigo text-white items-center">
+      <div class="flex bg-indigo-dark text-white items-center">
 
         <!-- left column -->
         <div class="w-7/12">
@@ -119,7 +119,7 @@
               absolute
               top-0
               mt-[-22px] 
-              ${i===1 ? 'bg-yellow' : 'bg-indigo'}`
+              ${i===1 ? 'bg-yellow' : 'bg-indigo-dark'}`
             ]"
             >
               <font-awesome-icon :icon="['fa', card.icon]" />
