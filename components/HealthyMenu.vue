@@ -45,12 +45,12 @@
 
             <h1 class="title font-Alovera font-bold leading-none flex items-start justify-between text-indigo-400 mb-5">
                 <span class="
-                inline-block 
-                mt-1 mr-7 px-3 py-2.5 
-                text-xl
-                bg-indigo-dark
-                text-white
-                rounded-xl">
+                    inline-block 
+                    mt-1 mr-7 px-3 py-2.5 
+                    text-xl
+                    bg-indigo-dark
+                    text-white
+                    rounded-xl">
                     <font-awesome-icon :icon="['fa', 'gem']" />
                 </span>
 
