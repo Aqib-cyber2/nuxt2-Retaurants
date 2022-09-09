@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+@font-face {
+    font-family: 'recipeVegan';
+    src: url('../fonts/VeganStylePersonalUse-5Y58.ttf');
+}
+
+@font-face {
+    font-family: 'Alovera';
+    src: url('../fonts/StrezyBreakRegular-rg998.otf');
+}

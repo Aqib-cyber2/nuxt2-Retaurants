@@ -1,5 +1,7 @@
 <script>
+import HealthyMenu from '~~/components/HealthyMenu.vue'
   export default{
+  components: { HealthyMenu },
 
     data(){
       return {
@@ -57,7 +59,7 @@
             <span class="text-sm font-medium">85% would make this again</span>
           </div>
 
-          <h1 class="text-5xl title font-bold my-5 leading-normal">Spicy Korean Devil Egg</h1>
+          <h1 class="text-5xl title font-bold font-recipeVegan my-5 leading-normal">Spicy Korean Devil Egg</h1>
 
           <p class="text-lg">
             Look no further for a creamy and ultra smooth
@@ -70,13 +72,13 @@
 
 
     <!-- OUR VALUES SECION -->
-    <section class="flex our--value">
+    <section class="flex our--value mb-16">
 
       <div class="w-5/12">
 
-        <div class="px-3 mb-10">
+        <div class="px-3 mb-16">
 
-          <h1 class="title font-bold my-5 leading-none flex items-start justify-between text-indigo-400">
+          <h1 class="title font-bold font-Alovera my-5 leading-none flex items-start justify-between text-indigo-400">
             <span class="
               inline-block 
               mt-2 mr-7 px-3 py-2.5 
@@ -90,7 +92,7 @@
             Our Value to help you
           </h1>
 
-          <p>
+          <p class="text-gray-600 text-sm">
             We are here to provide the best value for your health and you. 
             Let's join us to know more.
           </p>
@@ -102,7 +104,7 @@
           <div 
             v-for="(card, i) in helpCards" :key="i"
             class="
-            border p-6 pt-10 
+            p-6 pt-10 
             rounded-3xl 
             border border-white 
             relative"
@@ -143,7 +145,8 @@
     </section>
 
 
-    <!-- slider -->
+    <!-- recipes -->
+    <HealthyMenu />
   </div>
 </template>
 

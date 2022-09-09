@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@font-face {
-    font-family: 'recipeVegan';
-    src: url('../fonts/VeganStylePersonalUse-5Y58.ttf');
-}
-@font-face {
-    font-family: 'Alovera';
-    src: url('../fonts/StrezyBreakRegular-rg998.otf');
-}
+
 
 /* @font-face {
     font-family: 'recipeQuite';
@@ -39,7 +32,6 @@ body{
 
 .title{
     font-size: 2.5rem;
-    font-family: 'recipeVegan';
     letter-spacing: 5px;    
 }
 
@@ -64,7 +56,6 @@ body{
     VALUE HELP YOU SECTION
 -------------------------------*/
 .our--value .title{
-    font-family: 'Alovera';
     font-size: 2.85rem;
 }
 
