@@ -3,7 +3,7 @@
 
         data(){
             return{
-                active: false,
+                active: 'Pizza',
                 RecipeCategoies: [
                     {
                         title: 'Pizza',
@@ -26,6 +26,12 @@
                         icon: 'pizza-slice'
                     },
                 ]
+            }
+        },
+
+        computed: {
+            isActive() {
+                return menu => menu === this.active;
             }
         }
         
@@ -67,7 +73,7 @@
                     v-for="(recipe, i) in RecipeCategoies" :key="i"
                     class="px-5 py-3 mb-3 font-bold text-indigo-400 text-sm tracking-[.2rem] 
                     w-full text-left rounded-3xl border border-white"
-                    :class="[active ? 'shadow' : 'bg-indigo-100']"
+                    :class="[isActive(recipe.title) ? 'shadow-lg' : 'bg-indigo-100']"
                 >
 
                     <span class="
