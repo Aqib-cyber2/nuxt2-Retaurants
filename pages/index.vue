@@ -92,7 +92,7 @@ import HealthyMenu from '~~/components/HealthyMenu.vue'
             Our Value to help you
           </h1>
 
-          <p class="text-gray-600 text-sm">
+          <p class="text-indigo-300 text-sm">
             We are here to provide the best value for your health and you. 
             Let's join us to know more.
           </p>
@@ -128,7 +128,7 @@ import HealthyMenu from '~~/components/HealthyMenu.vue'
             </span>
 
             <h4 class="mb-2 font-bold text-indigo-400 text-indigo-400"> {{card.title}} </h4>
-            <p class="text-xs text-indigo-200"> {{card.description}} </p>
+            <p class="text-xs text-indigo-300"> {{card.description}} </p>
           </div>
 
 

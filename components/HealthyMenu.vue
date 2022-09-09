@@ -57,7 +57,7 @@
                 Try Our Healthy Recipes
             </h1>
 
-            <p class="text-gray-600 text-sm">
+            <p class="text-indigo-300 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
                 magni rem debitis error.
@@ -67,22 +67,23 @@
 
         <!-- Food categories -->
         <div class="flex">
-            <div class="w-3/12 nav-tabs" role="tablist" aria-orientation="vertical"> 
+            <div class="w-4/12 nav-tabs px-4" role="tablist" aria-orientation="vertical"> 
 
                 <button 
                     v-for="(recipe, i) in RecipeCategoies" :key="i"
                     class="px-5 py-3 mb-3 font-bold text-indigo-400 text-sm tracking-[.2rem] 
-                    w-full text-left rounded-3xl border border-white"
-                    :class="[isActive(recipe.title) ? 'shadow-lg' : 'bg-indigo-100']"
+                    w-11/12 text-left rounded-3xl border border-white"
+                    :class="[isActive(recipe.title) ? 'shadow-lg bg-indigo-250' : 'bg-indigo-100']"
                 >
 
                     <span class="
                         inline-block 
-                        mt-2 mr-7 px-3 py-2 
-                        text-base
-                        bg-indigo-dark
+                        mt-2 mr-7 px-2 py-1.5 
+                        text-sm
                         text-white
-                        rounded-xl">
+                        rounded-xl"
+                        :class="[isActive(recipe.title) ? 'bg-yellow' : 'bg-indigo-dark' ]"
+                        >
 
                         <font-awesome-icon :icon="['fa', recipe.icon]" />
                     </span>

@@ -83,3 +83,27 @@ body{
     /* color: #ffc749; */
     font-size: 22px;
 }
+
+
+/* Recipe Categories NAv tabs */
+.nav-tabs{
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(129 127 247);
+}
+/* Works on Chrome, Edge, and Safari */
+.nav-tabs::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .nav-tabs::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .nav-tabs::-webkit-scrollbar-thumb {
+    background-color: rgba(129, 127, 247, 0.575);
+    border-radius: 20px;
+  }
