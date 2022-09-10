@@ -60,6 +60,7 @@ body{
 
     position: relative;
     min-height: 400px;
+    width: var(--spacing);
     margin-left: auto;
     border: 15px solid #fff;
     border-radius: 50% 50% 10% 10% / 50% 50% 10% 10%;

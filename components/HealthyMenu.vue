@@ -95,11 +95,14 @@
 
             <div class="w-8/12 tab-content">
                 <div class="flex px-8 gap-8">
-                    <div class="card bg-white p-6 w-6/12">
-                        <div class="card-img">
-                            <img class="w-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
+
+                    <div class="flex bg-white shadow-lg w-full rounded-xl overflow-hidden">
+                        
+                        <div class="card-img w-7/12">
+                            <img class="w-full h-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
                         </div>
-                        <div class="card-body text-center py-5">
+
+                        <div class="card-body text-center my-auto">
                             <p class="text-indigo-400 text-base mb-5">
                                 Lorem, ipsum dolor sit amet consectetur.
                             </p>
@@ -110,8 +113,9 @@
                             font-bold
                             "> See Detail </a>
                         </div>
+
                     </div>
-                    <div class="card p-6 w-6/12 border-8 border-white">
+                    <!-- <div class="card p-6 w-6/12 border-8 border-white">
                         <div class="card-img">
                             <img class="w-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
                         </div>
@@ -126,7 +130,7 @@
                             font-bold
                             "> See Detail </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
