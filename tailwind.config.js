@@ -26,6 +26,11 @@ module.exports = {
       fontFamily: {
         Alovera: ['Alovera'],
         recipeVegan: ['recipeVegan']
+      },
+
+      // shaodw
+      boxShadow: {
+        'light-indigo': '-32px 20px 99px -59px rgba(164,79,217,1);',
       }
     },
 

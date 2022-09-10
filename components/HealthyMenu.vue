@@ -11,11 +11,11 @@
                     },
                     {
                         title: 'Dessert',
-                        icon: 'pizza-slice'
+                        icon: 'cookie'
                     },
                     {
                         title: 'Noodle',
-                        icon: 'pizza-slice'
+                        icon: 'brain'
                     },
                     {
                         title: 'Coctail',
@@ -94,9 +94,9 @@
             </div>
 
             <div class="w-8/12 tab-content">
-                <div class="flex px-8 gap-8">
+                <div class="flex px-10">
 
-                    <div class="flex bg-white shadow-lg w-full rounded-xl overflow-hidden">
+                    <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
                         
                         <div class="card-img w-7/12">
                             <img class="w-full h-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
