@@ -4,6 +4,8 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Setup
 
+#clone repo
+
 Make sure to install the dependencies:
 
 ```bash
@@ -14,7 +16,7 @@ yarn install
 npm install
 
 # pnpm
-pnpm install --shamefully-hoist
+pnpm install 
 ```
 
 ## Development Server
