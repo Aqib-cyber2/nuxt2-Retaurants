@@ -28,7 +28,7 @@ import HealthyMenu from '~~/components/HealthyMenu.vue'
           },
         ]
       }
-    }
+    },
 
   }
 </script>

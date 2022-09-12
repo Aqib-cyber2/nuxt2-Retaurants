@@ -33,6 +33,13 @@
             isActive() {
                 return menu => menu === this.active;
             }
+        },
+
+        methods: {
+            fetchData(){
+                alert(1);
+                this.$store.dispatch('fetchData');
+            }
         }
         
     }
@@ -110,8 +117,9 @@
                             <a href="#" 
                             class="px-5 inline-block py-3 text-white bg-yellow
                             text-sm tracking-[.2rem] rounded-2xl border border-white 
-                            font-bold
-                            "> See Detail </a>
+                            font-bold "
+                            @click.prevent="fetchData()"
+                            > See Detail </a>
                         </div>
 
                     </div>
