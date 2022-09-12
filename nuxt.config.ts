@@ -1,23 +1,21 @@
 import { defineNuxtConfig } from 'nuxt'
 
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-
-  modules: [ '@pinia/nuxt'],
-
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
+    build: {
+        postcss: {
+          postcssOptions: {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            },
+          }
         },
-      },
     },
-  },
 
-  css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
-    "~/assets/css/tailwind.css",
-    '~/assets/css/index.css',
-  ]
+    css: [
+        '@fortawesome/fontawesome-svg-core/styles.css',
+        '@/assets/css/tailwind.css',
+        '@/assets/css/index.css',
+    ],
 })

@@ -1,7 +1,6 @@
 <script>
-import HealthyMenu from '~~/components/HealthyMenu.vue'
+
   export default{
-  components: { HealthyMenu },
 
     data(){
       return {
