@@ -85,7 +85,7 @@
               bg-yellow
               text-white
               rounded-xl">
-              <font-awesome-icon :icon="['fa', 'gem']" />
+              <font-awesome-icon :icon="['fas', 'gem']" />
             </span>
 
             Our Value to help you
@@ -123,7 +123,7 @@
               ${i===1 ? 'bg-yellow' : 'bg-indigo-dark'}`
             ]"
             >
-              <font-awesome-icon :icon="['fa', card.icon]" />
+              <font-awesome-icon :icon="['fas', card.icon]" />
             </span>
 
             <h4 class="mb-2 font-bold text-indigo-400 text-indigo-400"> {{card.title}} </h4>

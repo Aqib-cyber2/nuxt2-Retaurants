@@ -1,4 +1,6 @@
 <script>
+    import { useRecipes } from '@/stores/recipe'
+
     export default{
 
         data(){
@@ -40,9 +42,15 @@
                 alert(1);
                 this.$store.dispatch('fetchData');
             }
+        },
+
+        mounted(){
+            const filtersStore = useRecipes()
+            console.log(filtersStore.$state, "HEY+E")
         }
         
     }
+
 </script>
 
 <template>
@@ -58,16 +66,18 @@
                     bg-indigo-dark
                     text-white
                     rounded-xl">
-                    <font-awesome-icon :icon="['fa', 'gem']" />
+                    <font-awesome-icon :icon="['fas', 'gem']" />
                 </span>
 
-                Try Our Healthy Recipes
+                Try Our Healthy Recipes   
             </h1>
 
             <p class="text-indigo-300 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
                 magni rem debitis error.
+                <br>
+
             </p>
 
         </div>
@@ -92,7 +102,7 @@
                         :class="[isActive(recipe.title) ? 'bg-yellow' : 'bg-indigo-dark' ]"
                         >
 
-                        <font-awesome-icon :icon="['fa', recipe.icon]" />
+                        <font-awesome-icon :icon="['fas', recipe.icon]" />
                     </span>
 
                     {{recipe.title}}
@@ -101,8 +111,8 @@
             </div>
 
             <div class="w-8/12 tab-content">
-                <div class="flex px-10">
-
+                <div class="flex px-10 mb-7">
+                    <!-- card -->
                     <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
                         
                         <div class="card-img w-7/12">
@@ -123,22 +133,13 @@
                         </div>
 
                     </div>
-                    <!-- <div class="card p-6 w-6/12 border-8 border-white">
-                        <div class="card-img">
-                            <img class="w-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
-                        </div>
-                        <div class="card-body text-center py-5">
-                            <p class="text-indigo-400 text-base mb-5">
-                                Lorem, ipsum dolor sit amet consectetur.
-                            </p>
-                            
-                            <a href="#" 
-                            class="px-5 inline-block py-3 text-indigo-400 bg-white
-                            text-sm tracking-[.2rem] rounded-2xl border border-white 
-                            font-bold
-                            "> See Detail </a>
-                        </div>
-                    </div> -->
+
+                </div>
+                <div class="text-center">
+                    <a :href=" `/category/pizzaburger` " 
+                        class="px-5 inline-block py-3 text-white bg-indigo-400
+                        text-xs tracking-[.2rem] hover:opacity-90"
+                    > View all </a>
                 </div>
             </div>
         </div>
