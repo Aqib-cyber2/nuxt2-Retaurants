@@ -1,11 +1,10 @@
 <script>
     import { useRecipes } from '@/stores/recipe'
-
     export default{
 
         data(){
             return{
-                active: 'Pizza',
+                activeRecipe: 'Pizza',
                 RecipeCategoies: [
                     {
                         title: 'Pizza',
@@ -27,26 +26,38 @@
                         title: 'Salad',
                         icon: 'pizza-slice'
                     },
-                ]
+                ],
+
+                recipe: null,
             }
         },
 
         computed: {
             isActive() {
-                return menu => menu === this.active;
+                return menu => menu === this.activeRecipe;
+            },
+            recipeResult(){
+                return this.recipe[0];
             }
         },
 
         methods: {
-            fetchData(){
-                alert(1);
-                this.$store.dispatch('fetchData');
+            async fetchData(){
+                // define store
+                let recipeStore = useRecipes();
+                await recipeStore.fetchRecipes();
+                let data = recipeStore.getRecipes;
+                let stringifyRec = JSON.stringify(data);
+                let parseyRec = JSON.parse(stringifyRec);
+                console.log(data, "data")
+                console.log(stringifyRec, "stringify")
+                console.log(parseyRec,"parse")
+                this.recipe = parseyRec;
             }
         },
 
         mounted(){
-            const filtersStore = useRecipes()
-            console.log(filtersStore.$state, "HEY+E")
+            this.fetchData()
         }
         
     }
@@ -55,8 +66,11 @@
 
 <template>
     <section class="mb-10">
+
         <!-- title -->
         <div class="px-3 mb-10 w-5/12">
+
+            <!-- {{ recipe[0] }} -->
 
             <h1 class="title font-Alovera font-bold leading-none flex items-start justify-between text-indigo-400 mb-5">
                 <span class="
@@ -76,8 +90,6 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
                 magni rem debitis error.
-                <br>
-
             </p>
 
         </div>
@@ -115,8 +127,8 @@
                     <!-- card -->
                     <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
                         
-                        <div class="card-img w-7/12">
-                            <img class="w-full h-full" src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="pizza img">
+                        <div class="card-img w-7/12"> 
+                            <img class="w-full h-full" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400" alt="pizza img">
                         </div>
 
                         <div class="card-body text-center my-auto">

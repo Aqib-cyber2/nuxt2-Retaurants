@@ -1,3 +1,3 @@
 <template>
-    <h2>This is category page</h2>
+    <h2>Dynamic category page</h2>
 </template>
