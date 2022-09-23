@@ -1,35 +1,56 @@
-<script>
-
-  export default{
-
-    data(){
-      return {
-        helpCards: [
-          {
-            title: 'Becomes Healthier',
-            description: 'immune will stronger if the body is healthier',
-            icon: 'heart'
-          },
-          {
-            title: 'Increase Energy',
-            description: 'Have enough energy can help carry out a routine',
-            icon: 'bolt'
-          },
-          {
-            title: 'Becomes Healthier',
-            description: 'Body will feel lighterand will not be easily tired',
-            icon: 'lock'
-          },
-          {
-            title: 'Becomes Healthier',
-            description: 'living a healthy life will also increase self-confidence',
-            icon: 'heart'
-          },
-        ]
-      }
+<script setup>
+  const helpCards = ref([{
+      title: 'Becomes Healthier',
+      description: 'immune will stronger if the body is healthier',
+      icon: 'heart'
     },
+    {
+      title: 'Increase Energy',
+      description: 'Have enough energy can help carry out a routine',
+      icon: 'bolt'
+    },
+    {
+      title: 'Becomes Healthier',
+      description: 'Body will feel lighterand will not be easily tired',
+      icon: 'lock'
+    },
+    {
+      title: 'Becomes Healthier',
+      description: 'living a healthy life will also increase self-confidence',
+      icon: 'heart'
+    },
+  ])
 
-  }
+  // export default{
+
+  //   data(){
+  //     return {
+  //       helpCards: [
+  // {
+  //   title: 'Becomes Healthier',
+  //   description: 'immune will stronger if the body is healthier',
+  //   icon: 'heart'
+  // },
+  // {
+  //   title: 'Increase Energy',
+  //   description: 'Have enough energy can help carry out a routine',
+  //   icon: 'bolt'
+  // },
+  // {
+  //   title: 'Becomes Healthier',
+  //   description: 'Body will feel lighterand will not be easily tired',
+  //   icon: 'lock'
+  // },
+  // {
+  //   title: 'Becomes Healthier',
+  //   description: 'living a healthy life will also increase self-confidence',
+  //   icon: 'heart'
+  // },
+  //       ]
+  //     }
+  //   },
+
+  // }
 </script>
 
 <template>
@@ -48,8 +69,8 @@
         <div class="w-5/12 px-12">
 
           <div class="flex">
-            <svg class="mr-4" data-name="feather-icon/trending-up" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              viewBox="0 0 20 20">
+            <svg class="mr-4" data-name="feather-icon/trending-up" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 20 20">
               <rect data-name="Bounding Box" width="20" height="20" fill="rgba(255,255,255,0)"></rect>
               <path
                 d="M.244,11.423a.834.834,0,0,1,0-1.178L6.494,3.994a.834.834,0,0,1,1.178,0L11.25,7.571l5.9-5.9H14.167a.833.833,0,1,1,0-1.667h5A.833.833,0,0,1,20,.833v5a.834.834,0,0,1-1.667,0V2.845L11.839,9.339a.834.834,0,0,1-1.179,0L7.083,5.761l-5.66,5.661a.834.834,0,0,1-1.179,0Z"
@@ -92,7 +113,7 @@
           </h1>
 
           <p class="text-indigo-300 text-sm">
-            We are here to provide the best value for your health and you. 
+            We are here to provide the best value for your health and you.
             Let's join us to know more.
           </p>
 
@@ -100,18 +121,13 @@
 
         <div class="our-value-cards grid grid-cols-2 gap-4 gap-y-12">
 
-          <div 
-            v-for="(card, i) in helpCards" :key="i"
-            class="
+          <div v-for="(card, i) in helpCards" :key="i" class="
             p-6 pt-10 
             rounded-3xl 
             border border-white 
-            relative"
-            :class="[i===1 ? 'shadow-lg' : 'bg-indigo-100']"
-          >
+            relative" :class="[i===1 ? 'shadow-lg' : 'bg-indigo-100']">
 
-            <span 
-            :class="[
+            <span :class="[
               `inline-block px-3 
               py-2 
               rounded-xl
@@ -121,8 +137,7 @@
               top-0
               mt-[-22px] 
               ${i===1 ? 'bg-yellow' : 'bg-indigo-dark'}`
-            ]"
-            >
+            ]">
               <font-awesome-icon :icon="['fas', card.icon]" />
             </span>
 
@@ -135,7 +150,7 @@
 
       </div>
 
-      <div class="w-7/12" >
+      <div class="w-7/12">
         <div class="img-box bg-[#b1b0f1]">
           <img src="@/assets/imgs/chef.png" class="w-full" alt="chef">
         </div>
@@ -148,4 +163,3 @@
     <HealthyMenu />
   </div>
 </template>
-

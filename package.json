@@ -21,6 +21,9 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@pinia/nuxt": "^0.4.2",
     "pinia": "^2.0.22",
-    "vue": "^3.2.39"
+    "swiper": "^8.4.2",
+    "vue": "^3.2.39",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-ssr-carousel": "^1.5.1"
   }
 }

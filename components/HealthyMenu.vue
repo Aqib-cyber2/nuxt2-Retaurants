@@ -1,66 +1,110 @@
-<script>
-    import { useRecipes } from '@/stores/recipe'
-    export default{
+<script setup>
 
-        data(){
-            return{
-                activeRecipe: 'Pizza',
-                RecipeCategoies: [
-                    {
-                        title: 'Pizza',
-                        icon: 'pizza-slice'
-                    },
-                    {
-                        title: 'Dessert',
-                        icon: 'cookie'
-                    },
-                    {
-                        title: 'Noodle',
-                        icon: 'brain'
-                    },
-                    {
-                        title: 'Coctail',
-                        icon: 'pizza-slice'
-                    },
-                    {
-                        title: 'Salad',
-                        icon: 'pizza-slice'
-                    },
-                ],
-
-                recipe: null,
-            }
+    const RecipeCategoies = ref([
+        {
+            title: 'Pizza',
+            icon: 'pizza-slice'
         },
-
-        computed: {
-            isActive() {
-                return menu => menu === this.activeRecipe;
-            },
-            recipeResult(){
-                return this.recipe[0];
-            }
+        {
+            title: 'Dessert',
+            icon: 'cookie'
         },
-
-        methods: {
-            async fetchData(){
-                // define store
-                let recipeStore = useRecipes();
-                await recipeStore.fetchRecipes();
-                let data = recipeStore.getRecipes;
-                let stringifyRec = JSON.stringify(data);
-                let parseyRec = JSON.parse(stringifyRec);
-                console.log(data, "data")
-                console.log(stringifyRec, "stringify")
-                console.log(parseyRec,"parse")
-                this.recipe = parseyRec;
-            }
+        {
+            title: 'Noodle',
+            icon: 'brain'
         },
+        {
+            title: 'Coctail',
+            icon: 'pizza-slice'
+        },
+        {
+            title: 'Salad',
+            icon: 'pizza-slice'
+        },
+    ])
+    const activeRecipe = ref('Pizza');
+    const recipe = ref(null);
 
-        mounted(){
-            this.fetchData()
+    const isActive = computed(()=>{
+        return (par)=>{
+            console.log(par, "value");
+            if(activeRecipe.value == par)
+                return true
+            else {
+                return false;
+            }
+            // return false;
+            
         }
+    } )
+
+
+
+
+
+
+    // async function fetchData(){
+    //     // define store
+    //     let data = await fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
+    //     let res = await data.json();
         
-    }
+    //     this.recipe = res.results;
+    //     console.log(this.recipe)
+    // }
+    // export default{
+
+    //     data(){
+    //         return{
+    //             activeRecipe: 'Pizza',
+    //             RecipeCategoies: [
+    //                 {
+    //                     title: 'Pizza',
+    //                     icon: 'pizza-slice'
+    //                 },
+    //                 {
+    //                     title: 'Dessert',
+    //                     icon: 'cookie'
+    //                 },
+    //                 {
+    //                     title: 'Noodle',
+    //                     icon: 'brain'
+    //                 },
+    //                 {
+    //                     title: 'Coctail',
+    //                     icon: 'pizza-slice'
+    //                 },
+    //                 {
+    //                     title: 'Salad',
+    //                     icon: 'pizza-slice'
+    //                 },
+    //             ],
+    //             recipe: null,
+    //         }
+    //     },
+
+    //     computed: {
+    //         isActive() {
+    //             return menu => menu === this.activeRecipe;
+    //         },
+    //         recipeResult(){
+    //             // return this.recipe.id;
+    //         }
+    //     },
+
+    //     methods: {
+
+            // async fetchData(){
+            //     // define store
+            //     let data = await fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
+            //     let res = await data.json();
+                
+            //     this.recipe = res.results;
+            //     console.log(this.recipe)
+            // }
+    //     },
+
+        
+    // }
 
 </script>
 
@@ -69,8 +113,6 @@
 
         <!-- title -->
         <div class="px-3 mb-10 w-5/12">
-
-            <!-- {{ recipe[0] }} -->
 
             <h1 class="title font-Alovera font-bold leading-none flex items-start justify-between text-indigo-400 mb-5">
                 <span class="
@@ -85,7 +127,7 @@
 
                 Try Our Healthy Recipes   
             </h1>
-
+  
             <p class="text-indigo-300 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
@@ -140,7 +182,6 @@
                             class="px-5 inline-block py-3 text-white bg-yellow
                             text-sm tracking-[.2rem] rounded-2xl border border-white 
                             font-bold "
-                            @click.prevent="fetchData()"
                             > See Detail </a>
                         </div>
 
@@ -151,6 +192,7 @@
                     <a :href=" `/category/pizzaburger` " 
                         class="px-5 inline-block py-3 text-white bg-indigo-400
                         text-xs tracking-[.2rem] hover:opacity-90"
+                        
                     > View all </a>
                 </div>
             </div>
