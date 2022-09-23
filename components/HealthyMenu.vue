@@ -1,5 +1,5 @@
 <script setup>
-
+    const activeRecipe = ref('Pizza');
     const RecipeCategoies = ref([
         {
             title: 'Pizza',
@@ -22,35 +22,31 @@
             icon: 'pizza-slice'
         },
     ])
-    const activeRecipe = ref('Pizza');
-    const recipe = ref(null);
+    const recipesResult = ref(null);
 
+    // computed properties
     const isActive = computed(()=>{
         return (par)=>{
-            console.log(par, "value");
             if(activeRecipe.value == par)
                 return true
             else {
                 return false;
             }
-            // return false;
-            
         }
     } )
 
 
 
+    // const { data: count } = await useFetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
+
+    // console.log(count.value.results[0]);
 
 
 
-    // async function fetchData(){
-    //     // define store
-    //     let data = await fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
-    //     let res = await data.json();
-        
-    //     this.recipe = res.results;
-    //     console.log(this.recipe)
-    // }
+    const { data: recipes } =  useFetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
+    recipesResult.value = recipes;
+
+
     // export default{
 
     //     data(){
@@ -132,6 +128,8 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
                 magni rem debitis error.
+
+                {{recipesResult.results}}
             </p>
 
         </div>
