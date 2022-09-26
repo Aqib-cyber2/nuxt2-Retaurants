@@ -1,4 +1,17 @@
 <script setup>
+    import { useRecipes } from '~~/stores/recipe';
+    let recipeStore = useRecipes();
+    let totalRecipes = ref([])
+
+    // fecthing recipes when component loaded
+    recipeStore.fetchRecipes().then((e)=>{
+        totalRecipes.value = e;
+        console.log(totalRecipes.value)
+    });
+
+
+    // console.log(totalRecipes) 
+
     const activeRecipe = ref('Pizza');
     const RecipeCategoies = ref([
         {
@@ -22,7 +35,7 @@
             icon: 'pizza-slice'
         },
     ])
-    const recipesResult = ref(null);
+
 
     // computed properties
     const isActive = computed(()=>{
@@ -34,74 +47,7 @@
             }
         }
     } )
-
-
-
-    // const { data: count } = await useFetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
-
-    // console.log(count.value.results[0]);
-
-
-
-    const { data: recipes } =  useFetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
-    recipesResult.value = recipes;
-
-
-    // export default{
-
-    //     data(){
-    //         return{
-    //             activeRecipe: 'Pizza',
-    //             RecipeCategoies: [
-    //                 {
-    //                     title: 'Pizza',
-    //                     icon: 'pizza-slice'
-    //                 },
-    //                 {
-    //                     title: 'Dessert',
-    //                     icon: 'cookie'
-    //                 },
-    //                 {
-    //                     title: 'Noodle',
-    //                     icon: 'brain'
-    //                 },
-    //                 {
-    //                     title: 'Coctail',
-    //                     icon: 'pizza-slice'
-    //                 },
-    //                 {
-    //                     title: 'Salad',
-    //                     icon: 'pizza-slice'
-    //                 },
-    //             ],
-    //             recipe: null,
-    //         }
-    //     },
-
-    //     computed: {
-    //         isActive() {
-    //             return menu => menu === this.activeRecipe;
-    //         },
-    //         recipeResult(){
-    //             // return this.recipe.id;
-    //         }
-    //     },
-
-    //     methods: {
-
-            // async fetchData(){
-            //     // define store
-            //     let data = await fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
-            //     let res = await data.json();
-                
-            //     this.recipe = res.results;
-            //     console.log(this.recipe)
-            // }
-    //     },
-
-        
-    // }
-
+    
 </script>
 
 <template>
@@ -128,9 +74,12 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Natus similique quisquam recusandae vel officia 
                 magni rem debitis error.
-
-                {{recipesResult.results}}
+                <!-- {{recipeStore}} -->
             </p>
+
+            <div v-for="(recipe, i) in totalRecipes.results" :key="i">
+                {{recipe.id}}
+            </div>
 
         </div>
 
@@ -161,14 +110,17 @@
 
                 </button>
             </div>
+            
+            <div v-if="totalRecipes.length && totalRecipes.length > 0" class="w-8/12 tab-content">
 
-            <div class="w-8/12 tab-content">
+
                 <div class="flex px-10 mb-7">
                     <!-- card -->
                     <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
                         
                         <div class="card-img w-7/12"> 
                             <img class="w-full h-full" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400" alt="pizza img">
+                            <!-- <img class="w-full h-full" :src="totalRecipes.results" alt="pizza img"> -->
                         </div>
 
                         <div class="card-body text-center my-auto">

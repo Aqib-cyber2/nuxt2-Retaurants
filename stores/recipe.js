@@ -6,16 +6,30 @@ export const useRecipes = defineStore('recipeStore',{
       recipes: []
     }
   },
+
   getters: {
-    getRecipes(state) { return state.recipes.results },
+    getRecipes(state){
+      return state.recipes;
+    }
   },
 
   actions: {
 
     async fetchRecipes() {
-      let data = await fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
-      let res = await data.json();
-      this.recipes = res
+  
+      let todos = await $fetch('https://api.unsplash.com/search/photos?query=pizza&client_id=cKakzKM1cx44BUYBnEIrrgN_gnGqt81UcE7GstJEils')
+      this.recipes = todos.results;
+      return todos;
+      // return todos.results;
+      // .then(res=>{
+      //   this.recipes = res.results;
+      //   // console.log(this.recipes)
+      // })
+      // .catch(err=>{
+      //   console.log(err)
+      // })
+
+      // webstorm
     },
 
   },
