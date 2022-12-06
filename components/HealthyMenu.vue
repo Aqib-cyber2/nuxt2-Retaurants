@@ -5,7 +5,7 @@
 
     // fecthing recipes when component loaded
     recipeStore.fetchRecipes().then((e)=>{
-        totalRecipes.value = e;
+        totalRecipes.value = e.results;
         console.log(totalRecipes.value)
     });
 
@@ -52,7 +52,6 @@
 
 <template>
     <section class="mb-10">
-
         <!-- title -->
         <div class="px-3 mb-10 w-5/12">
 
@@ -76,10 +75,6 @@
                 magni rem debitis error.
                 <!-- {{recipeStore}} -->
             </p>
-
-            <div v-for="(recipe, i) in totalRecipes.results" :key="i">
-                {{recipe.id}}
-            </div>
 
         </div>
 
@@ -111,7 +106,7 @@
                 </button>
             </div>
             
-            <div v-if="totalRecipes.length && totalRecipes.length > 0" class="w-8/12 tab-content">
+            <div class="w-8/12 tab-content">
 
 
                 <div class="flex px-10 mb-7">
