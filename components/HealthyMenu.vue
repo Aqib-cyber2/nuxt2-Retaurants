@@ -12,7 +12,8 @@
 
     // console.log(totalRecipes) 
 
-    const activeRecipe = ref('Pizza');
+    const activeRecipe = ref('Pizza'); // for active tabs
+    const category = ref('pizza') // category to fetc data of same route
     const RecipeCategoies = ref([
         {
             title: 'Pizza',
@@ -47,7 +48,12 @@
             }
         }
     } )
-    
+
+    function toggleActiveTab(tab){
+      category.value = tab.toLowerCase();
+      activeRecipe.value = tab;
+    }
+   
 </script>
 
 <template>
@@ -77,7 +83,6 @@
             </p>
 
         </div>
-
         <!-- Food categories -->
         <div class="flex">
             <div class="w-4/12 nav-tabs px-4" role="tablist" aria-orientation="vertical"> 
@@ -87,6 +92,7 @@
                     class="px-5 py-3 mb-3 font-bold text-indigo-400 text-sm tracking-[.2rem] 
                     w-11/12 text-left rounded-3xl border border-white"
                     :class="[isActive(recipe.title) ? 'shadow-lg bg-indigo-250' : 'bg-indigo-100']"
+                    @click="toggleActiveTab(recipe.title)"
                 >
 
                     <span class="
@@ -115,7 +121,6 @@
                         
                         <div class="card-img w-7/12"> 
                             <img class="w-full h-full" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400" alt="pizza img">
-                            <!-- <img class="w-full h-full" :src="totalRecipes.results" alt="pizza img"> -->
                         </div>
 
                         <div class="card-body text-center my-auto">
@@ -134,11 +139,13 @@
 
                 </div>
                 <div class="text-center">
-                    <a :href=" `/category/pizzaburger` " 
-                        class="px-5 inline-block py-3 text-white bg-indigo-400
-                        text-xs tracking-[.2rem] hover:opacity-90"
+                    <!-- <a :href="`/category/${category}` " 
                         
-                    > View all </a>
+                        
+                    > View all </a> -->
+                    <NuxtLink class="px-5 inline-block py-3 text-white bg-indigo-400
+                        text-xs tracking-[.2rem] hover:opacity-90" to="/category/" +category >About</NuxtLink>
+                    <!-- <router-link to='/category/' + category></router-link> -->
                 </div>
             </div>
         </div>

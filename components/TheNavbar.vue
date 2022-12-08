@@ -15,10 +15,10 @@
                 ml-auto"
             >
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">Home</a>
+                    <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/">Home</router-link>
                 </li>
                 <li>
-                    <a class="md:p-4 py-2 block hover:text-purple-400" href="#">About</a>
+                    <router-link class="md:p-4 py-2 block hover:text-purple-400" to="/about">About</router-link>
                 </li>
             </ul> 
         </nav>

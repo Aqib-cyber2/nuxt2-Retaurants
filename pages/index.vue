@@ -20,37 +20,6 @@
       icon: 'heart'
     },
   ])
-
-  // export default{
-
-  //   data(){
-  //     return {
-  //       helpCards: [
-  // {
-  //   title: 'Becomes Healthier',
-  //   description: 'immune will stronger if the body is healthier',
-  //   icon: 'heart'
-  // },
-  // {
-  //   title: 'Increase Energy',
-  //   description: 'Have enough energy can help carry out a routine',
-  //   icon: 'bolt'
-  // },
-  // {
-  //   title: 'Becomes Healthier',
-  //   description: 'Body will feel lighterand will not be easily tired',
-  //   icon: 'lock'
-  // },
-  // {
-  //   title: 'Becomes Healthier',
-  //   description: 'living a healthy life will also increase self-confidence',
-  //   icon: 'heart'
-  // },
-  //       ]
-  //     }
-  //   },
-
-  // }
 </script>
 
 <template>
@@ -161,5 +130,6 @@
 
     <!-- recipes -->
     <HealthyMenu />
+
   </div>
 </template>
