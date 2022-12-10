@@ -2,18 +2,8 @@
     import { useRecipes } from '~~/stores/recipe';
     let recipeStore = useRecipes();
     let totalRecipes = ref([])
-
-    // fecthing recipes when component loaded
-    recipeStore.fetchRecipes().then((e)=>{
-        totalRecipes.value = e.results;
-        console.log(totalRecipes.value)
-    });
-
-
-    // console.log(totalRecipes) 
-
     const activeRecipe = ref('Pizza'); // for active tabs
-    const category = ref('pizza') // category to fetc data of same route
+    const category = ref('pizza') // category to fetch data of same route
     const RecipeCategoies = ref([
         {
             title: 'Pizza',
@@ -37,6 +27,11 @@
         },
     ])
 
+    onMounted(async () => {
+        // fecthing recipes when component loaded
+        let {results} = await recipeStore.fetchRecipes('pizza');
+        totalRecipes.value = results;
+    })
 
     // computed properties
     const isActive = computed(()=>{
@@ -49,9 +44,13 @@
         }
     } )
 
-    function toggleActiveTab(tab){
-      category.value = tab.toLowerCase();
-      activeRecipe.value = tab;
+    async function toggleActiveTab(tab){
+        category.value = tab.toLowerCase();
+        activeRecipe.value = tab;
+
+        // fecthing recipes when component loaded
+        let {results} = await recipeStore.fetchRecipes(category.value);
+        totalRecipes.value = results;
     }
    
 </script>
@@ -115,12 +114,12 @@
             <div class="w-8/12 tab-content">
 
 
-                <div class="flex px-10 mb-7">
+                <div v-if="totalRecipes.length " class="flex px-10 mb-7">
                     <!-- card -->
                     <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
-                        
+                        <!-- https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400 -->
                         <div class="card-img w-7/12"> 
-                            <img class="w-full h-full" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400" alt="pizza img">
+                            <img class="w-full h-full" :src="totalRecipes[1].urls.small" alt="pizza img">
                         </div>
 
                         <div class="card-body text-center my-auto">
@@ -139,13 +138,9 @@
 
                 </div>
                 <div class="text-center">
-                    <!-- <a :href="`/category/${category}` " 
-                        
-                        
-                    > View all </a> -->
                     <NuxtLink class="px-5 inline-block py-3 text-white bg-indigo-400
-                        text-xs tracking-[.2rem] hover:opacity-90" to="/category/" +category >About</NuxtLink>
-                    <!-- <router-link to='/category/' + category></router-link> -->
+                        text-xs tracking-[.2rem] hover:opacity-90" 
+                        :to="'/category/' + category" > view more </NuxtLink>
                 </div>
             </div>
         </div>
