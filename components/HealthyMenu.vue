@@ -118,8 +118,8 @@
                     <!-- card -->
                     <div class="flex bg-white shadow-light-indigo w-full rounded-xl overflow-hidden">
                         <!-- https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTAzOTR8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfHx8fDE2NjMwOTQ2NDI&ixlib=rb-1.2.1&q=80&w=400 -->
-                        <div class="card-img w-7/12"> 
-                            <img class="w-full h-full" :src="totalRecipes[1].urls.small" alt="pizza img">
+                        <div class="card-img w-7/12 h-64"> 
+                            <img class="w-full h-full object-cover" :src="totalRecipes[0].urls.small" alt="pizza img">
                         </div>
 
                         <div class="card-body text-center my-auto">
